@@ -1,113 +1,179 @@
-import Image from 'next/image'
+'use client'
+import { Play, Bookmark, ChevronDown,Linkedin, Mail, GithubIcon, Monitor } from 'lucide-react'
+import {register} from 'swiper/element/bundle'
+register();
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/effect-fade';
+import 'swiper/css/autoplay';
+import HeaderTop from './components/HeaderTop';
+import CarouselHeader from './components/CarouselHeader';
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="">
+     <HeaderTop />
+        <CarouselHeader />
+        
+        <div className='p-6'>
+          <h2 className='text-2xl font-semibold'>Assista Agora</h2>
+          <span className='text-lg  '>Lista selecionada dos melhores animes</span>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Swiper
+          slidesPerView={6}
+          navigation
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <SwiperSlide ><a href=""><img src="/thumb/onepiecethumb.jpg" alt="" /></a></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/narutothumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/cowboybebopthumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/beckthumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/claymorethumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/bocchitherock.jpg" alt="" /></SwiperSlide>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <SwiperSlide ><a href=""><img src="/thumb/onepiecethumb.jpg" alt="" /></a></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/narutothumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/cowboybebopthumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/beckthumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/claymorethumb.jpg" alt=""  width={265} height={398} /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/bocchitherock.jpg" alt="" /></SwiperSlide>
+        </Swiper>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className='p-6'>
+          <h2 className='text-2xl font-semibold'>Mangás</h2>
+          <span className='text-lg  '>Lista selecionada dos melhores Mangás</span>
+        </div>
+        
+        <Swiper
+          slidesPerView={6}
+          navigation
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide ><img src="/thumb/manga/m2.jpg" alt="" /></SwiperSlide>
+        </Swiper>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className='p-6'>
+          <h2 className='text-2xl font-semibold'>Destaques</h2>
+        </div>
+
+        <div className='bg-gradient-to-r from-orange-600 via-orange-400 to-yellow-400 p-6  flex justify-center mb-16'>
+            <div className='bg-black w-[1390px] h-[278px] flex justify-center items-center '>
+              <div className=''>
+                <img src="hajime-no-ippo.jpg" alt="hajime" className='destaque' />
+              </div>
+              <div className='ml-6'>
+                <p className='font-bold text-xl p-3'>Hajime No Ippo</p>
+                <p className='w-[50rem] text-justify p-3'>
+                  Makunouchi Ippo is an ordinary high school student in Japan. Since he spends most of his time away from school helping his mother run the family business, 
+                  he doesn't get to enjoy his younger years like most teenagers. Always a target for bullying at school. One of these after-school bullying sessions turns Ippo's life around for the better, as he is saved by a boxer named Takamura. 
+                  He decides to follow in Takamura's footsteps and train to become a boxer
+                </p>
+                <div className='flex'>
+                  <div className=' ml-3'>
+                    <a href='#' className='p-3 bg-orange-600 border-2 border-orange-600  text-black font-semibold hover:bg-orange-300 hover:border-orange-300 flex'><Play />Assistir S1 E1</a>
+                  </div>
+                  <div className='ml-3'>
+                    <a href='#' className='p-3 bg-black  text-orange-600 border-solid border-2 border-orange-600 font-semibold hover:border-orange-300 flex'><Bookmark color='#ea580c'/>Adicionar a fila</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div className='bg-gradient-to-r from-red-600 via-orange-600 to-orange-900 p-6  flex justify-center mb-16'>
+            <div className='bg-black w-[1390px] h-[278px] flex justify-center items-center '>
+              <div className=''>
+                <img src="/destaque/samuraishamploo.png" alt="hajime" className='destaque' />
+              </div>
+              <div className='ml-6'>
+                <p className='font-bold text-xl p-3'>Samurai Shamploo</p>
+                <p className='w-[50rem] text-justify p-3 text-sm'>
+                Fuu Kasumi is a young and clumsy waitress who spends her days peacefully working in a small teahouse. That is, until she accidentally spills a drink all over one of her customers! 
+                With a group of samurai now incessantly harassing her, Fuu desperately calls upon another samurai in the shop, Mugen, who quickly defeats them with his wild fighting technique, utilizing movements reminiscent to that of breakdancing. 
+                Unfortunately, Mugen decides to pick a fight with the unwilling ronin Jin, who wields a more precise and traditional style of swordfighting, and the latter proves to be a formidable opponent. 
+                </p>
+                <div className='flex'>
+                  <div className=' ml-3'>
+                    <a href='#' className='p-3 bg-orange-600 border-2 border-orange-600  text-black font-semibold hover:bg-orange-300 hover:border-orange-300 flex'><Play />Assistir S1 E1</a>
+                  </div>
+                  <div className='ml-3'>
+                    <a href='#' className='p-3 bg-black  text-orange-600 border-solid border-2 border-orange-600 font-semibold hover:border-orange-300 flex'><Bookmark color='#ea580c'/>Adicionar a fila</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div className='flex justify-center'>
+            <a href="">
+              <img src="onepplay.png" alt="Assista" className=''/>
+            </a>
+        </div>
+
+        <footer className='h-screen'>
+          
+          <img src="dbbotom.png" alt="" width={300} height={300} className='m-auto pt-28'/>
+          <p className='flex justify-center pt-3'>Procurando algo pra assistir?</p>
+          <div className='flex justify-center'>
+            <div className='ml-3'>
+              <a href='#' className='p-2 px-7 uppercase mt-7 bg-black  text-orange-600 border-solid border-2 border-orange-600 font-semibold hover:border-orange-300 flex hover:text-orange-300'>Ver Tudo</a>
+            </div>
+          </div>
+
+          <div className='flex justify-center mt-7  ml-16'>
+          
+          <div className=' justify-center grid mr-12 mb-5 '>
+            <h4 className='font-semibold mb-3 text-sm'>Navegação</h4>
+            <ul className=''>
+              <li className='grid text-sm gap-3 text-gray-400 '>
+                <a href="" className='hover:text-white hover:underline'>Populares</a>
+                <a href="" className='hover:text-white hover:underline'>Mangás</a>
+                <a href="" className='hover:text-white hover:underline'>Noticias</a>
+                <a href="" className='hover:text-white hover:underline'>Jogos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className=' justify-center grid mb-5 '>
+            <h4 className='font-semibold mb-3 text-sm'>Contato</h4>
+            <ul className=''>
+              <li className='grid text-sm gap-3 text-gray-400'>
+                <a href="" className='hover:text-white hover:underline flex'><Linkedin size={16} className='mr-1'/>Likedin</a>
+                <a href="" className='hover:text-white hover:underline flex'><Monitor size={16} className='mr-1'/>My Web Page</a>
+                <a href="" className='hover:text-white hover:underline flex'><Mail size={16} className='mr-1' />Email</a>
+                <a href="" className='hover:text-white hover:underline flex'><GithubIcon size={16} className='mr-1'/>Github</a>
+              </li>
+            </ul>
+          
+          </div>
+          
+          </div>
+          <div className='w-[768px] flex justify-between p-2 border-t-[.0625rem] m-auto'>
+            <span className='flex px-3 py-2'>JJK - © - 2023 </span>
+            <button className='flex hover:bg-slate-900 px-3 py-2'><ChevronDown className='mr-2'/>Portugues - Brasil</button>
+          </div>
+        </footer>
+           
+          
+      
     </main>
   )
 }
