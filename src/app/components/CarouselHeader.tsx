@@ -1,37 +1,55 @@
-import {register} from 'swiper/element/bundle'
-register();
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { Play, Bookmark } from 'lucide-react'
 
-import { EffectFade } from 'swiper/modules';
 
 const data =[
-    {id: '1', image: 'https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/1ecde018e863e2aaee31f00a23378c35.jpe' },
-    {id: '2', image: 'https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/2e54344c7cc1675af721b4021222230f.jpe' },
-    {id: '3', image: 'https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/e6b2cd29a5ff62f4591d3b299007e24e.jpe' },
-    {id: '4', image: 'https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/0273e80242d80b0218f640e038269c18.jpe' },
-    {id: '5', image: 'https://gkpb.com.br/wp-content/uploads/2023/01/hajime-no-ippo-chega-a-netflix-e1672759914159.jpg' },
-    {id: '6', image: 'https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/a7243613edbb4322bf20caed6a270b52.jpe' },
+    {id: '1', image: '/Carouseltop/onepiececarousel.png' },
+    {id: '2', image: '/Carouseltop/hajimecarousel.png' },
+    {id: '3', image: '/Carouseltop/huntercarousel.png' },
+    {id: '4', image: '/Carouseltop/blackclovercarousel.png' },
+    {id: '5', image: '/Carouseltop/narutocarousel.png' },
+    {id: '6', image: '/Carouseltop/promisedcarousel.png' },
   ]
 
+
 export default function CarouselHeader(){
+  
     return(
         <div>
           <Swiper
-            modules={[EffectFade]}
+            modules={[Autoplay]}
             effect='fade'
-            autoplay={true}
-            slidesPerView={1}
-            pagination={{clickable: true}}
+            //autoplay={{delay: 1000}}
+            //pagination={{clickable: true}}
             navigation
             loop={true}
           >
 
             {data.map( (item) => (
               <SwiperSlide key={item.id}>
+                <div className=' w-[600px] h-[222px] absolute top-[25%] left-[3%] bp-2 '>
+                  <div className=''>
+                  <p>
+                    Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis 
+                    acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. 
+                    Certo dia, para salvar amigos que estavam sendo atacados por
+                  </p>
+                  </div>
+                  <div className='flex mt-10'>
+                    <div className='text-center justify-center  '>
+                      <a href='#' className='p-2 bg-orange-600 border-2 border-orange-600  text-black font-semibold hover:bg-orange-300 hover:border-orange-300 flex'><Play /> Assistir S1 E1</a>
+                    </div>
+                    <div className='ml-5'>
+                      <button className='p-2 px-7  uppercase  text-orange-600 border-solid border-2 border-orange-600 font-semibold hover:border-orange-300  hover:text-orange-300'><Bookmark /></button>
+                    </div>
+                  </div>
+                </div>
+
                 <img 
                 src={item.image} 
-                alt="Slider"
-                className='slide-item' 
+                alt=""
+                className='slide-item imgx' 
                 />
                 
               </SwiperSlide>

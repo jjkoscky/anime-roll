@@ -1,7 +1,7 @@
 [
     {
         "navegar": "Populares"
-        
+
     },
     {
         "navegar": "Novidades"
@@ -9,18 +9,21 @@
     },
     {
         "navegar": "A-Z"
-        
+    
     },
     {
         "navegar": "Temporadas"
         
+        
     },
     {
         "navegar": "Calendário de lançamento"
+       
         
     },
     {
         "navegar": "Vidoclipes & Shows"
+        
         
     }
 ]
