@@ -18,7 +18,7 @@ export default function HeaderTop( ){
         <div className='flex'>
           <a href="" className="flex items-center">
             <LogoIcon />
-            <h1 className=' text-orange-400 font-semibold text-lg '>MyTopAnimes</h1>
+            <h1 className=' text-orange-400 font-semibold text-lg ml-1'>MyTopAnimes</h1>
           </a>
           <div className='hidden md:flex'>
            
@@ -34,7 +34,7 @@ export default function HeaderTop( ){
             {isOpen && (
             <div className="fixed inset-0 w-full h-full mt-14 bg-black bg-opacity-40 backdrop-blur-sm" onClick={() => setIsOpen((prev) => !prev)}>
               <div className="flex flex-row ">
-                <div className='ml-[249px] w-fit bg-zinc-900 py-3'>
+                <div className='ml-[253px] w-fit bg-zinc-900 py-3'>
                     
                     {list.map((item, i) => (
                         <div className='flex p-4 cursor-pointer hover:bg-zinc-800 text-sm
@@ -105,7 +105,7 @@ export default function HeaderTop( ){
             </button>
             {isOpenNoticias && (
             <div className="fixed inset-0 w-full h-full mt-14 bg-black bg-opacity-40 backdrop-blur-sm" onClick={() => setIsOpenNoticias((prev) => !prev)}> 
-              <div className=' absolute  ml-[520px] flex flex-col bg-zinc-900'>
+              <div className=' absolute  ml-[524px] flex flex-col bg-zinc-900'>
               {listNoticia.map((item, i) => (
                   <div className='flex p-4 pr-[165px] cursor-pointer hover:bg-zinc-800 text-sm
                     ' 

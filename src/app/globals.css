@@ -28,7 +28,44 @@ body {
   object-fit: cover;
 }
 
+.prev-next-carousel-top{
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-top-offset: 33%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: var(--swiper-theme-color);
+}
+
+.custom-carousel {
+    
+    
+}
+
+.custom-carousel .swiper-button-prev{
+    /*right: 48px;*/
+    top: 364px;
+}
+
+.custom-carousel .swiper-button-next{
+  /*right: 48px;*/
+  top: 364px;
+}
+
+
+
+
+
 .imgx{
-  /*-webkit-mask-image: linear-gradient(to top, transparent 25%, black 100%);*/
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   
+
+}
+
+.Carousel-img-top{
+  z-index: 10;
+}
+
+.logocarousel{
+  width: 520px;
+ 
+ 
 }

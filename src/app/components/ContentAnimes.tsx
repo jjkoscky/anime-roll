@@ -10,7 +10,7 @@ export default function ContentAnimes(){
                 <h2 className='text-2xl font-semibold '>Assista Agora</h2>
                 <span className='text-base text-zinc-400 '>Assista os melhores animes de graça</span>
             </div>
-            <div className='custom-carousel'>
+            <div className=''>
                 <Swiper
                 slidesPerView={6}
                 navigation
