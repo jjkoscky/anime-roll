@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ListaCarouselAnimes from '../ListaCarouselAnimes.json';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function ContentAnimes() {
   const [isMobile, setIsMobile] = useState(false);
@@ -49,7 +50,7 @@ export default function ContentAnimes() {
               <div className="">
                 <div className="">
                   <a href="">
-                    <img
+                    <Image
                       src={item.thumbAnime}
                       alt=""
                       width={265}

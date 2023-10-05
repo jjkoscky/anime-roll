@@ -1,4 +1,5 @@
 import { Play, Bookmark } from 'lucide-react'
+import Image from 'next/image'
 export default function ContentDestaques(){
     return(
         <div className='pl-10 pt-10 pr-10'>
@@ -10,7 +11,7 @@ export default function ContentDestaques(){
         <div className='bg-gradient-to-r from-orange-600 via-orange-400 to-yellow-400 p-6  flex justify-center  mb-16'>
             <div className=' 2xl:flex bg-black 2xl:w-[1390px] 2xl:h-[278px] justify-center items-center'>
               <a href='https://animesonlinecc.to/episodio/hajime-no-ippo-episodio-1/' target='_blank' className=''>
-                <img  src="hajime-no-ippo.jpg" alt="hajime" className='destaque' />
+                <Image  src="/hajime-no-ippo.jpg" alt="hajime" className='destaque' width={225} height={325}/>
               </a>
               <div className=''>
                 <p className='font-bold text-sm 2xl:text-xl p-3'>Hajime No Ippo</p>
@@ -34,7 +35,7 @@ export default function ContentDestaques(){
         <div className='bg-gradient-to-r from-red-600 via-orange-600 to-orange-900 p-6  flex justify-center mb-16'>
             <div className='2xl:flex bg-black 2xl:w-[1390px] 2xl:h-[278px] justify-center items-center '>
               <a href='https://animesonlinehd.vip/episodio/samurai-champloo-episodio-1/' target='_blank' className=''>
-                <img src="/destaque/samuraishamploo.png" alt="Samurai Shaploo" className='destaque' />
+                <Image src="/destaque/samuraishamploo.png" alt="Samurai Shaploo" className='destaque' width={225} height={325}/>
               </a>
               <div className=''>
                 <p className='font-bold 2xl:text-xl p-3'>Samurai Shamploo</p>

@@ -62,7 +62,7 @@ export default function CarouselHeader(){
                 
                 <div className='  absolute top-0 left-[70px] md:top-5 2xl:top-8'>
                 <div className='w-[220px] md:w-[320px] 2xl:w-[460px] ml-[10px]'>
-                  <img src={item.logo} alt="" className=' mt-5 ' />
+                  <Image src={item.logo} alt="" className=' mt-5 ' width={1920} height={1080}/>
                 </div>
                   <p className='bg-black bg-opacity-60 p-2 text-justify  font-sm w-[275px] 2xl:w-[355px] 2xl:text-base mt-5'>
                     {item.paragrafo}

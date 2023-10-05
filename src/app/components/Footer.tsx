@@ -1,11 +1,12 @@
 
 import { ChevronDown,Linkedin, Mail, GithubIcon, Monitor } from 'lucide-react'
+import Image from 'next/image'
 export default function FooterPage(){
     return(
         
           <footer className=' bg-gradient-to-b from-black via-black to-blue-950'>
           
-          <img src="shenlong.png" alt="" width={650} height={500} className='m-auto pt-11'/>
+          <Image src="/shenlong.png" alt="" width={650} height={500} className='m-auto pt-11'/>
           <p className='flex justify-center pt-3'>O que deseja assistir?</p>
           <div className='flex justify-center'>
             <div className='ml-3 pb-5'>
