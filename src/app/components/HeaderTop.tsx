@@ -39,7 +39,7 @@ export default function HeaderTop( ){
         <div className='font-normal bg-[#23252b] flex justify-between items-center sticky top-0 z-20 2xl:px-[6rem] px-5'>
         <div className='flex'>
           
-        <button onClick={ev=>openMenu()}  className="flex mr-[36px] 2xl:hidden">
+        <button onClick={ev=>openMenu()}  className="flex  mr-[36px] md:invisible 2xl:hidden">
             <Menu size={28}/>
           </button>
           
