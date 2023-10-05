@@ -1,4 +1,3 @@
-
 import { ChevronDown,Linkedin, Mail, GithubIcon, Monitor } from 'lucide-react'
 import Image from 'next/image'
 export default function FooterPage(){
