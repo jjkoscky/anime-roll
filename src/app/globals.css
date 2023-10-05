@@ -10,11 +10,6 @@ body {
 
 }
 
-.slide-item{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .slide-small{
   width: 295px;
@@ -26,6 +21,20 @@ body {
   width: 200px;
   height: 250px;
   object-fit: cover;
+  margin: auto;
+}
+
+.carousel-top-cel{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
+}
+
+.carousel-top-desk{
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  
 }
 
 .prev-next-carousel-top{
@@ -35,10 +44,6 @@ body {
     --swiper-navigation-color: var(--swiper-theme-color);
 }
 
-.custom-carousel {
-    
-    
-}
 
 .custom-carousel .swiper-button-prev{
     /*right: 48px;*/
@@ -54,18 +59,3 @@ body {
 
 
 
-.imgx{
-  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  
-
-}
-
-.Carousel-img-top{
-  z-index: 10;
-}
-
-.logocarousel{
-  width: 520px;
- 
- 
-}

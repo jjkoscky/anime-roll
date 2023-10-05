@@ -1,5 +1,5 @@
 import { LogoIcon } from "./icons/LogoIcon"
-import { Search, User, Bookmark } from 'lucide-react'
+import { Search, User, Bookmark, Menu } from 'lucide-react'
 import list from "../ListaMenuNavegar.json"
 import listNoticia from "../ListaMenuNoticias.json"
 import ListaCategoria1 from "../ListaCategoria1.json"
@@ -7,28 +7,57 @@ import ListaCategoria2 from "../ListaCategoria2.json"
 import ListaCategoria3 from "../ListaCategoria3.json"
 import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from 'react'
+import { useCallback, useEffect  } from 'react';
+import MenuHidden from "./Menu"
 
 export default function HeaderTop( ){
-  const [isOpen, setIsOpen] = useState (false)
+
+  const [isOpen, setIsOpen ] = useState (false)
   const [isOpenNoticias, setIsOpenNoticias] = useState (false)
+  const [isMenuOpen, setIsMenuOpen ] = useState (false)
 
 
+
+    const [backgroundColor, setBackgroundColor] = useState('bg-[#23252b]'); // Cor de fundo inicial
+  
+    const handleClick = () => {
+      setIsOpen((prev) => !prev); // Chama o evento setIsOpen
+      
+    }
+
+    const openMenu = useCallback(() => {
+      setIsMenuOpen(true);
+    },[]);
+    
+    const closeMenu = useCallback(() => {
+      setIsMenuOpen(false);
+    },[]);
+  
+   
+    
     return(
-        <div className='font-normal bg-[#23252b] flex justify-between items-center sticky top-0 z-20 px-[6rem]'>
+        <div className='font-normal bg-[#23252b] flex justify-between items-center sticky top-0 z-20 2xl:px-[6rem] px-5'>
         <div className='flex'>
+          
+        <button onClick={ev=>openMenu()}  className="flex mr-[36px] 2xl:hidden">
+            <Menu size={28}/>
+          </button>
+          
+          <MenuHidden isVisible={isMenuOpen} onClose={closeMenu}/>
           <a href="" className="flex items-center">
             <LogoIcon />
-            <h1 className=' text-orange-400 font-semibold text-lg ml-1'>MyTopAnimes</h1>
+            <h1 className=' hidden 2xl:block text-orange-400 font-semibold text-lg ml-1'>MyTopAnimes</h1>
           </a>
+          
           <div className='hidden md:flex'>
            
             
             <button 
-            onClick={() => setIsOpen((prev) => !prev)} 
-            className="px-4 py-4 hover:bg-zinc-900 ml-2 flex  text-zinc-300 hover:text-white
+            onClick={handleClick} 
+           className={`px-4 py-4 hover:bg-zinc-900 ${backgroundColor} ml-2 flex  text-zinc-300 hover:text-white`}
             
-            ">
-              Navegar <AiFillCaretDown className="flex mt-2 ml-2 w-3 h-3 "></AiFillCaretDown>
+            >
+              Navegar <AiFillCaretDown className={`flex mt-2 ml-2 w-3 h-3`}></AiFillCaretDown>
               
             </button>
             {isOpen && (
