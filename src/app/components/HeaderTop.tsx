@@ -79,7 +79,7 @@ export default function HeaderTop( ){
                 </div>
               
                 <div className="w-fit bg-zinc-900  border-l-[.0625rem] py-3">
-                <div className="flex p-4 w-52 text-zinc-500 text-sm font-semibold">Genêro</div>
+                <div className="flex p-4 w-52 text-zinc-500 text-sm font-semibold">Gênero</div>
                 {ListaCategoria1.map((item, i) => (
                         <div className='flex p-4 w-52 cursor-pointer hover:bg-zinc-800 text-sm
                         ' 

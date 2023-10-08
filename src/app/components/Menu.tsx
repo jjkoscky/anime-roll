@@ -22,7 +22,7 @@ export default function MenuHidden({isVisible, onClose}: MenuProps){
                             <li className="grid grid-cols-1 text-base gap-6">
                                 <span className="text-zinc-500 uppercase text-xs font-semibold pt-2">Navegar</span>
                                 <a href="">Populares</a>
-                                <a href="">Navidades</a>
+                                <a href="">Novidades</a>
                                 <a href="">Calendário</a>
                                 <a href="">Video Clipes</a>
                                 <a href="">Gêneros</a>
