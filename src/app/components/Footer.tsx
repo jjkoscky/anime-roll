@@ -42,7 +42,7 @@ export default function FooterPage(){
           
           </div>
           <div className='w-full 2xl:w-[768px] flex justify-between border-t-[.0625rem] m-auto '>
-            <span className='flex  p-3'>JJK - © - 2023 </span>
+            <a href='https://jjkoscky-web.vercel.app/' target='_blank' className='flex  p-3'>JJK - © - 2023 - Contato </a>
             <button className='flex hover:bg-slate-900 p-3'><ChevronDown className='mr-2'/>Portugues - Brasil</button>
           </div>
         </footer>

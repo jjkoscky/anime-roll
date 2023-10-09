@@ -46,7 +46,7 @@ export default function HeaderTop( ){
           <MenuHidden isVisible={isMenuOpen} onClose={closeMenu}/>
           <a href="" className="flex items-center">
             <LogoIcon />
-            <h1 className=' hidden 2xl:block text-orange-400 font-semibold text-lg ml-1'>MyTopAnimes</h1>
+            <h1 className=' hidden 2xl:block text-orange-400 font-semibold text-lg ml-1'>Animeroll</h1>
           </a>
           
           <div className='hidden md:flex'>
