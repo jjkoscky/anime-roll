@@ -33,7 +33,7 @@ export default function FooterPage(){
               <li className='grid text-sm gap-3 text-gray-400'>
                 <a href="https://www.linkedin.com/in/jefferson-koscky-jr/" target='_blank' className='hover:text-white hover:underline flex'><Linkedin size={16} className='mr-1'/>Likedin</a>
                 <a href="https://github.com/jjkoscky" target='_blank' className='hover:text-white hover:underline flex'><GithubIcon size={16} className='mr-1'/>Github</a>
-                <a href="" className='hover:text-white hover:underline flex'><Monitor size={16} className='mr-1'/>My Web Page</a>
+                <a href="https://jjkoscky-web.vercel.app" target='_blank' className='hover:text-white hover:underline flex'><Monitor size={16} className='mr-1'/>My Web Page</a>
                 <a href="mailto:jjunior.koscky@gmail.com" className='hover:text-white hover:underline flex'><Mail size={16} className='mr-1' />Email</a>
               </li>
             </ul>
