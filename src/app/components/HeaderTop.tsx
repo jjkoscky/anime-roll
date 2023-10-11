@@ -39,7 +39,7 @@ export default function HeaderTop( ){
         <div className='font-normal bg-[#23252b] flex justify-between items-center sticky top-0 z-20 2xl:px-[6rem] px-5'>
         <div className='flex'>
           
-        <button onClick={ev=>openMenu()}  className="flex  mr-[36px] md:invisible 2xl:hidden">
+        <button onClick={ev=>openMenu()}  className="flex  mr-[36px] lg:invisible 2xl:hidden">
             <Menu size={28}/>
           </button>
           
@@ -49,7 +49,7 @@ export default function HeaderTop( ){
             <h1 className=' hidden 2xl:block text-orange-400 font-semibold text-lg ml-1'>Animeroll</h1>
           </a>
           
-          <div className='hidden md:flex'>
+          <div className='hidden lg:flex'>
            
             
             <button 
@@ -63,7 +63,7 @@ export default function HeaderTop( ){
             {isOpen && (
             <div className="fixed inset-0 w-full h-full mt-14 bg-black bg-opacity-40 backdrop-blur-sm" onClick={() => setIsOpen((prev) => !prev)}>
               <div className="flex flex-row ">
-                <div className='ml-[253px] w-fit bg-zinc-900 py-3'>
+                <div className='2xl:ml-[218px] xl:ml-[124px] lg:ml-[124px] w-fit bg-zinc-900 py-3'>
                     
                     {list.map((item, i) => (
                         <div className='flex p-4 cursor-pointer hover:bg-zinc-800 text-sm
@@ -134,7 +134,7 @@ export default function HeaderTop( ){
             </button>
             {isOpenNoticias && (
             <div className="fixed inset-0 w-full h-full mt-14 bg-black bg-opacity-40 backdrop-blur-sm" onClick={() => setIsOpenNoticias((prev) => !prev)}> 
-              <div className=' absolute  ml-[524px] flex flex-col bg-zinc-900'>
+              <div className=' absolute  2xl:ml-[489px] lg:ml-[395px] flex flex-col bg-zinc-900'>
               {listNoticia.map((item, i) => (
                   <div className='flex p-4 pr-[165px] cursor-pointer hover:bg-zinc-800 text-sm
                     ' 
